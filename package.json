@@ -1,0 +1,22 @@
+{
+  "name": "playwright-framework",
+  "version": "1.0.0",
+  "description": "A sample framework project using Playwright for end-to-end testing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "bdd": "cucumber-js --require-module ts-node/register --require tests/steps/**/*.ts tests/Features/**/*.feature --format json:reports/cucumber_report.json",
+    "postbdd": "node generate-cucumber-html-report.js"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.3.0",
+    "@playwright/test": "^1.53.2",
+    "cucumber-html-reporter": "^6.0.0",
+    "cucumber-tsflow": "^4.5.2",
+    "multiple-cucumber-html-reporter": "^3.9.3",
+    "playwright": "^1.53.2",
+    "ts-node": "^10.9.2"
+  },
+  "author": "",
+  "license": "MIT"
+}
